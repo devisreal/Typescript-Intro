@@ -1,9 +1,16 @@
-// pascal naming convention
-// If you include const before the enum keyword, the compiler generates more optimized code
-const enum ShirtSize {
-  Small = 1,
-  Medium,
-  Large,
+// function calculateTax(income: number): number {
+//   return 0;
+// }
+
+function calculateTax(
+  income: number,
+  /*taxYear?: number */ 
+  taxYear = 2022
+): number {
+  //   if ((taxYear || 2022) < 2022) return income * 1.2;
+  //   return income * 1.3;
+  if ((taxYear || 2022) < 2022) return income * 1.2;
+  return income * 1.3;
 }
-let mySize: ShirtSize = ShirtSize.Medium;
-console.log(mySize);
+
+calculateTax(10_000, 2022);
