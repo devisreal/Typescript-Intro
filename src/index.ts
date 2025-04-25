@@ -1,2 +1,2 @@
-let numbers: number[] = [];
-numbers.forEach(n => n.toString())
+let user: [number, string] = [1, "Mosh"];
+user.push(2);
