@@ -1,7 +1,6 @@
-// Literal (exact , specific)
-type Quantity = 50 | 100;
+function greet(name: string | null | undefined) {
+  if (name) console.log(name.toUpperCase());
+  else console.log("Hola!");
+}
 
-let quantity: Quantity = 50;
-
-type Metric = "cm" | "inch";
-let myMetric: Metric = "cm";
+greet(null);
