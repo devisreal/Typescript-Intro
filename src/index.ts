@@ -1,16 +1,30 @@
-// function calculateTax(income: number): number {
-//   return 0;
-// }
+// * Option 1
+// let employee: {
+//   id: number;
+//   name: string;
+// } = { id: 1, name: "" };
 
-function calculateTax(
-  income: number,
-  /*taxYear?: number */ 
-  taxYear = 2022
-): number {
-  //   if ((taxYear || 2022) < 2022) return income * 1.2;
-  //   return income * 1.3;
-  if ((taxYear || 2022) < 2022) return income * 1.2;
-  return income * 1.3;
-}
+// * Option 2
+// let employee: {
+//   id: number;
+//   name: string;
+// } = { id: 1, name: "Mosh" };
 
-calculateTax(10_000, 2022);
+// * Making property readonly
+// let employee: {
+//     readonly id: number;
+//     name: string;
+//   } = { id: 1, name: "Mosh" };
+
+// * Methods
+let employee: {
+  id: number;
+  name: string;
+  retire: (date: Date) => void;
+} = {
+  id: 1,
+  name: "Mosh",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
